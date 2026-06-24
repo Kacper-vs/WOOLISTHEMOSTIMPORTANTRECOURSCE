@@ -11,6 +11,28 @@ if os.name == 'nt':
 else:
     import select
 
+
+def countdown(seconds_limit , prompt="TIME REMAINING:"):
+    RED = "\033[0;31m"
+    END = "\033[0m"
+
+    start_time = time.time()
+    
+    while True : 
+        elapsed = time.time() - start_time
+        time_left = max(0,int(seconds_limit - elapsed))
+        
+               
+        sys.stdout.write(f"\r{prompt} [{RED}{time_left}s{END}]")
+        sys.stdout.flush()
+        
+        if time_left <= 0:
+            break
+            
+        time.sleep(0.1)
+        
+    print(f"\n{RED}Time's up!{END}")
+
 def get_timed_input(prompt, seconds_limit):
     sys.stdout.write(prompt)
     sys.stdout.flush()

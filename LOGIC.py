@@ -1,6 +1,6 @@
 import time
 import sys
-from input import clear_screen, print_slow, get_valid_input, get_timed_input
+from input import clear_screen, print_slow, get_valid_input, get_timed_input,countdown
 
 RED = "\033[0;31m"
 GREEN = "\033[0;32m"
@@ -56,7 +56,7 @@ def first_puzzle():
             print_slow("\nNARRATOR :", "Capitals are where the answer lies...", BOLD + ITALIC)
             time.sleep(1)
             print_slow("\nNARRATOR :", "You have 20 seconds to awnser this...", BOLD + ITALIC)
-            get_timed_input("TIME_TO_SOLVE", seconds_limit=20); time.sleep(20)
+            countdown(20,"Solve Solve Solve !")
             clear_screen()
             
             print_slow("Satyr :", "Decode phrase 1 instantly...", LIGHT_RED)
