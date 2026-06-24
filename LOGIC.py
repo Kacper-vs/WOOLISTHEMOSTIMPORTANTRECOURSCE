@@ -38,7 +38,7 @@ def first_puzzle():
         print_slow("Satyr :", "So now that you know my name...", LIGHT_RED)
         time.sleep(0.5)
         print_slow("Satyr :", "Are you STILL willing to continue?", LIGHT_RED)
-        time.sleep(0.5)
+        time.sleep(0.4)
         
         choice = get_valid_input(">", ["YES", "NO"])
         clear_screen()
