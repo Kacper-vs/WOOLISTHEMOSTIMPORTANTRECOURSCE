@@ -1,0 +1,8 @@
+{
+    "NARRATOR_PRINT": {
+        "WELCOME MESSAGE1": "Welcome to the FlOwEr...\n"
+    },
+    "NARRATOR_INPUT": {
+        "PROMPT TO STRT MATCH": "Would you like to start your expidition [YES OR NO]: "
+    }
+}
