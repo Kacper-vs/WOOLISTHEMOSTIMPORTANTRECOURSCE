@@ -4,9 +4,15 @@ import time
 import configparser
 import sys 
 
+from PUZZLES.puzzle1 import puzzle_1
 from FUNCTIONS.typing_func import typing_print
 from FUNCTIONS.typing_func import typing_input
 from FUNCTIONS.typing_func import clear_screen
+
+#VARIABLES
+Y_OR_N = ["YES", "NO"]
+C_OR_P = ["COURAGE", "PASSION"]
+
 
 # ---------------------------
 # INI COLOR SYSTEM
@@ -23,7 +29,6 @@ def get_prefix(section):
 
 def parse_ansi(value):
     return value.encode().decode("unicode_escape")
-
 
 def get_color(section, key):
     return parse_ansi(config[section][key])
@@ -79,14 +84,19 @@ def story():
     )
     prompt = prompt.strip().upper()
 
-    if prompt == "YES":
+    if prompt == Y_OR_N[0]: # THIS REFERS TO YES
         clear_screen()
         speak(get_prefix("yokai"), YOKAI, Yokai_greeting)
         time.sleep(1)
         prompt2 = question(
             get_prefix("yokai"), YOKAI, Yokai_question1)
+        if prompt2.strip().upper() == C_OR_P[0]: # THIS REFERS TO COURAGE
+            clear_screen()
+            time.sleep(0.5)
+            puzzle_1()
+ 
 
-    elif prompt == "NO":
+    elif prompt == Y_OR_N[1]: # THIS REFERS TO NO
         clear_screen()
         typing_print(WARNING + "QUITTING... MISSION FAILED" + RESET, 0.05)
         sys.exit(0)

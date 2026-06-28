@@ -1,7 +1,14 @@
 {
     "???": {
+        "TAUNT": "TICK TOCK TICK TOCK....",
+        "PUZZLE ONE" : "Are you ready to being your challenge... ",
         "GREETING": "Welcome to my ga- i mean expidition...\n",
         "QUESTION ONE": "What do you seek most... [COURAGE OR PASSION]\n"
+    },
+    "pzl1_input":{
+        "PHRASE ONE": "Ten Ugly Long-necked Ittan-momen Prowl.\n",
+        "PHRASE TWO": "Rokurokubi often outsmart terrified samurai.\n \n"
     }
+    
 }
 
