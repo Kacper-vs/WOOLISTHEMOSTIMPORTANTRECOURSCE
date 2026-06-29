@@ -1,6 +1,9 @@
 NARRATOR_WELCOME = dialouge_data["NARRATOR PRINT"]["WELCOME MESSAGE1"]
 NARRATOR_PROMPT = dialouge_data["NARRATOR_INPUT"]["PROMPT TO STRT MATCH"]
 
+TAUNT = dialouge_data["NARRATOR_INPUT"]
+
+
 Yokai_greeting = dialouge_data["???"]["GREETING"]
 Yokai_question1 = dialouge_data["???"]["QUESTION ONE"]
 
