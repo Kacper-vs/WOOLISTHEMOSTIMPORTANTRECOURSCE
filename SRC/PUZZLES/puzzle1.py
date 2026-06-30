@@ -59,7 +59,6 @@ def speak(prefix, color, text):
 def question(prefix, color, text):
     return typing_input(color + prefix + " " + text + RESET, 0.01)
 
-
 BEGINNING_PHRASE = entity_data["???"]["PUZZLE ONE"]
 PHRASE_ONE = entity_data["pzl1_input"]["PHRASE ONE"]
 PHRASE_TWO = entity_data["pzl1_input"]["PHRASE TWO"]
@@ -74,7 +73,7 @@ CHECK_AWNSER_2 = entity_data["YOKAI_CHECK"]["CHECK_AWNSER2"]
 def puzzle_1():
     clear_screen()
     prompt = question(get_prefix("yokai"), YOKAI, BEGINNING_PHRASE)
-    if prompt.strip().upper() == Y_OR_N[0]:  # This refers to "YES"
+    if prompt.strip().upper() == Y_OR_N[0]: # This refers to "YES"
         clear_screen()
         speak(get_prefix("yokai"), YOKAI, PHRASE_ONE)
         time.sleep(1)
@@ -88,5 +87,7 @@ def puzzle_1():
         clear_screen()
         CA1 = question(get_prefix("yokai"), YOKAI, CHECK_AWNSER_1)
         if CA1.strip().upper() == PZL_ANS[0]:
-            pass
+            CA2 = question(get_prefix("yokai"), YOKAI , CHECK_AWNSER_2)
+            
+
 puzzle_1()

@@ -12,9 +12,11 @@
     "YOKAI_CHECK" :{
         "CHECK_AWNSER1" : "Times up... Whats your awnser.", 
         "CHECK_AWNSER2" : "Alright Now for the second one..." 
+    }, 
+    "PRAISE" : {
+       "PRAISE_1" : "Well Done... This will be over soon.", 
+       "PRAISE_2" : "Good Stuff Now that you awnser finsished follow through and i lett you pass..."
     }
-
-    
     
 }
 
